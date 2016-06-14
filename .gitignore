@@ -1,0 +1,10 @@
+node_modules
+dist
+*.log
+*.pid
+*.seed
+.DS_Store
+lib
+coverage
+logs
+pids

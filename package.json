@@ -1,0 +1,46 @@
+{
+  "name": "react-material-navigation",
+  "author": "Adam Houston",
+  "version": "0.1.5",
+  "description": "Simple React implementation of Material Design's Navigation Drawer and Toolbar.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --recursive",
+    "test-cov": "babel-node isparta cover --report html --report text node_modules/.bin/_mocha",
+    "build": "babel src --out-dir dist",
+    "clean": "rm -rf dist",
+    "lint": "eslint src test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.1.21",
+    "babel-eslint": "^4.1.5",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.1.18",
+    "eslint": "^1.9.0",
+    "eslint-plugin-react": "^3.10.0",
+    "radium": "^0.17.1",
+    "react": "^15.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phazyy/react-material-navigation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/phazyy/react-material-navigation/issues"
+  },
+  "homepage": "https://github.com/phazyy/react-material-navigation",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-0"
+    ]
+  }
+}
