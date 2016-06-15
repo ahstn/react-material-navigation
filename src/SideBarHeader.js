@@ -43,22 +43,22 @@ SideBarHeader.defaultProps = {
 var styles = {
   base: {
     width: '100%',
-    padding: '1rem',
+    padding: '1rem'
   },
 
   user: {
-      img: {
-          float: 'left',
-          marginRight: '.75rem',
-      },
-      h1: {
-          fontSize: '18px',
-          margin: '.5rem 0',
-      },
-      h2: {
-          fontSize: '14px',
-          margin: 0
-      }
+    img: {
+        float: 'left',
+        marginRight: '.75rem'
+    },
+    h1: {
+        fontSize: '18px',
+        margin: '.5rem 0'
+    },
+    h2: {
+        fontSize: '14px',
+        margin: 0
+    }
   }
 }
 

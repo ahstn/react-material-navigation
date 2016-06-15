@@ -68,8 +68,8 @@ var styles = {
       fontSize: '1.25rem',
       marginRight: '.75rem',
       ':nth-of-type(2)': {
-          alignContent: 'flex-end',
-          marginRight: 0
+        alignContent: 'flex-end',
+        marginRight: 0
       }
     },
     span: {

@@ -30,16 +30,16 @@ var styles = {
     justifyContent: 'center',
     cursor: 'pointer',
     span: {
-        margin: '0 .25rem',
+      margin: '0 .25rem'
     },
     i: {
-        width: '1.5rem',
+      width: '1.5rem'
     },
     ':last-of-type': {
-        marginRight: '1.5rem',
+      marginRight: '1.5rem'
     },
     ':hover': {
-        backgroundColor: '#33485C'
+      backgroundColor: '#33485C'
     }
   }
 };
