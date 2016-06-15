@@ -10,7 +10,7 @@ class AppBar extends Component {
     const { title, icon, children } = this.props;
 
     return (
-      <header className='appbar' style={[ styles.appbar ]}>
+      <header className='appbar' style={[ styles.base ]}>
         <div className='appbar-nav-button' style={[ styles.content, styles.button ]}>
           <i className='material-icons'>{ icon }</i>
         </div>

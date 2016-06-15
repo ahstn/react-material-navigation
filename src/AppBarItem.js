@@ -10,9 +10,9 @@ class AppBarItem extends Component {
     const { title, icon } = this.props;
 
     return (
-      <div className='appbar-item' style={[ styles.base ]}>
-        <i className='material-icons'>{ icon }</i>
-        { title && title}
+      <div className='appbar-item' style={[ styles.content, styles.base ]}>
+        <i className='material-icons' style={[ styles.content, styles.i ]}>{ icon }</i>
+        { title && (<span style={[ styles.content, styles.span ]}>{ title }</span>)}
       </div>
     );
   }
@@ -29,19 +29,30 @@ var styles = {
     display: 'inline-flex',
     justifyContent: 'center',
     cursor: 'pointer',
-    span: {
-      margin: '0 .25rem'
-    },
-    i: {
-      width: '1.5rem'
-    },
-    ':last-of-type': {
+
+    ':lastOfType': {
       marginRight: '1.5rem'
     },
     ':hover': {
       backgroundColor: '#33485C'
     }
-  }
+  },
+
+  content: {
+    alignItems: 'center',
+    display: 'inline-flex',
+    color: 'white',
+    justifyContent: 'center',
+    padding: '.45rem'
+  },
+
+  span: {
+    margin: '0 .25rem'
+  },
+
+  i: {
+    width: '1.5rem'
+  },
 };
 
 AppBarItem = Radium(AppBarItem);
