@@ -1,7 +1,7 @@
 {
   "name": "react-material-navigation",
   "author": "Adam Houston",
-  "version": "0.1.62",
+  "version": "0.1.7",
   "description": "Simple React implementation of Material Design's Navigation Drawer and Toolbar.",
   "main": "dist/index.js",
   "scripts": {
