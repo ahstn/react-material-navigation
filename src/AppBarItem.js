@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+ import React, { Component, PropTypes } from 'react';
+ import Radium from 'radium';
 
 class AppBarItem extends Component {
   constructor(props) {
@@ -43,4 +44,5 @@ var styles = {
   }
 };
 
+AppBarItem = Radium(AppBarItem);
 export default AppBarItem;

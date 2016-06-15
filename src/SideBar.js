@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import Radium from 'radium';
 
 class SideBar extends Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class SideBar extends Component {
     const { open, children } = this.props;
 
     return (
-      <aside className="sidebar">
+      <aside className="sidebar" style={[ styles.base ]}>
         { children }
       </aside>
     );
@@ -37,4 +38,5 @@ var styles = {
   }
 }
 
+SideBar = Radium(SideBar);
 export default SideBar;
