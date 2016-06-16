@@ -8,6 +8,7 @@ class SideBar extends Component {
 
   render() {
     const { open, children } = this.props;
+    if (!open) { return null; }
 
     return (
       <aside className="sidebar" style={[ styles.base ]}>

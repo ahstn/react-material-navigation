@@ -7,11 +7,13 @@ class AppBar extends Component {
   }
 
   render() {
-    const { title, icon, children } = this.props;
+    const { title, icon, onMenuClick, children } = this.props;
 
     return (
       <header className='appbar' style={[ styles.base ]}>
-        <div className='appbar-nav-button' style={[ styles.content, styles.button ]}>
+        <div className='appbar-nav-button'
+          style={[ styles.content, styles.button ]}
+          onClick={ onMenuClick }>
           <i className='material-icons'>{ icon }</i>
         </div>
         <div className='appbar-title' style={[ styles.content, styles.title ]}>
@@ -25,7 +27,8 @@ class AppBar extends Component {
 
 AppBar.propTypes = {
   title: PropTypes.string.isRequired,
-  icon: PropTypes.string
+  icon: PropTypes.string,
+  onMenuClick: PropTypes.func
 };
 
 var styles = {
@@ -48,7 +51,11 @@ var styles = {
   },
   button: {
     cursor: 'pointer',
-    width: '3.5rem'
+    width: '3.5rem',
+    
+    ':hover': {
+      backgroundColor: '#33485C'
+    }
   },
   title: {
     marginRight: 'auto'
