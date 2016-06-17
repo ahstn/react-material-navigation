@@ -17,7 +17,7 @@ class SideBar extends Component {
 
     return (
       <aside className="sidebar"
-        style={[ styles.base, styles[theme], overlay ? styles.adjacent : null ]}>
+        style={[ styles.base, styles[theme], overlay ? null : styles.adjacent ]}>
         { childrenWithProps }
       </aside>
     );
