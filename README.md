@@ -12,7 +12,6 @@ I develop with Chromium so other browser support will be shakey (to say the leas
 * Separate AppBar and SideBar into their own sub-folders
 * General refactoring (mainly SideBarItem.js)
 * Add animation and click effects
-* Allow the AppBar to either overlay the SideBar or not
 * Write docs when at a stable version
 
 ## Implementation
