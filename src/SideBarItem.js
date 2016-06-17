@@ -16,7 +16,7 @@ class SideBarItem extends Component {
   }
 
   render() {
-    const { title, icon, route, children } = this.props;
+    const { title, icon, route, theme, children } = this.props;
     const { open } = this.state;
 
     if (route) {
@@ -25,15 +25,20 @@ class SideBarItem extends Component {
           <StyleRoot>
             <RLink to={ route } style={[ styles.a ]}>
               { icon && (
-                <i className="material-icons" style={[ styles.i ]}>
+                <i className="material-icons"
+                  style={[ styles.i, styles[theme] ]}>
                   { icon }
                 </i>
               )}
               { icon && (
-                <span style={[ styles.titleIcon ]}>{ title }</span>
+                <span style={[ styles.titleIcon, styles[theme] ]}>
+                  { title }
+                </span>
               )}
               { !icon && (
-                <span style={[ styles.title ]}>{ title }</span>
+                <span style={[ styles.title, styles[theme] ]}>
+                  { title }
+                </span>
               )}
             </RLink>
           </StyleRoot>
@@ -45,19 +50,24 @@ class SideBarItem extends Component {
           <StyleRoot>
             <a a onClick={ this.handleClick } style={[ styles.a ]}>
               { icon && (
-                <i className="material-icons" style={[ styles.i ]}>
+                <i className="material-icons"
+                  style={[ styles.i, styles[theme] ]}>
                   { icon }
                 </i>
               )}
               { icon && (
-                <span style={[ styles.titleIcon ]}>{ title }</span>
+                <span style={[ styles.titleIcon, styles[theme] ]}>
+                  { title }
+                </span>
               )}
               { !icon && (
-                <span style={[ styles.title ]}>{ title }</span>
+                <span style={[ styles.title, styles[theme] ]}>
+                  { title }
+                </span>
               )}
               { children &&
                 <i className='material-icons'
-                  style={[ styles.i, styles.arrow ]}>
+                  style={[ styles.i, styles.arrow, styles[theme] ]}>
                   arrow_drop_down
                 </i>
               }
@@ -107,6 +117,9 @@ var styles = {
   title: {
     marginRight: 'auto',
     paddingLeft: '2.1rem'
+  },
+  dark: {
+    color: '#DEDEDE'
   },
 
   i: {
