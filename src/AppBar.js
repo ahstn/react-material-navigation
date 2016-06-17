@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Radium from 'radium';
+import styles from './AppBarStyles';
 
 class AppBar extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class AppBar extends Component {
   }
 
   render() {
-    const { title, icon, onMenuClick, children } = this.props;
+    const { title, icon, children, onMenuClick } = this.props;
 
     return (
       <header className='appbar' style={[ styles.base ]}>
@@ -17,7 +18,7 @@ class AppBar extends Component {
           <i className='material-icons'>{ icon }</i>
         </div>
         <div className='appbar-title' style={[ styles.content, styles.title ]}>
-          <h1>{ title}</h1>
+          <h1>{ title }</h1>
         </div>
         { children }
       </header>
@@ -31,35 +32,5 @@ AppBar.propTypes = {
   onMenuClick: PropTypes.func
 };
 
-var styles = {
-  base: {
-    alignContent: 'center',
-    backgroundColor: '#2A3B4C',
-    display: 'flex',
-    height: '65px',
-    position: 'fixed',
-    top: 0,
-    width: '100%',
-    zIndex: 9
-  },
-  content: {
-    alignItems: 'center',
-    display: 'inline-flex',
-    color: 'white',
-    justifyContent: 'center',
-    padding: '0.45rem'
-  },
-  button: {
-    cursor: 'pointer',
-    width: '3.5rem',
-    
-    ':hover': {
-      backgroundColor: '#33485C'
-    }
-  },
-  title: {
-    marginRight: 'auto'
-  }
-}
 AppBar = Radium(AppBar);
 export default AppBar;

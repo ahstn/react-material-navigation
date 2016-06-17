@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Radium from 'radium';
+import styles from './SideBarStyles';
 
 class SideBarHeader extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class SideBarHeader extends Component {
 
     if (user) {
       return (
-        <header style={[ styles.base ]}>
+        <header style={[ styles.header ]}>
           <div className="user">
             <img src={ avatar } width="50px" style={[ styles.img ]}/>
             <h1 style={[ styles.h1 ]}>{ name }</h1>
@@ -40,26 +41,6 @@ SideBarHeader.propTypes = {
 SideBarHeader.defaultProps = {
   user: false
 };
-
-var styles = {
-  base: {
-    width: '100%',
-    padding: '1rem'
-  },
-
-  img: {
-    float: 'left',
-    marginRight: '.75rem'
-  },
-  h1: {
-    fontSize: '18px',
-    margin: '.5rem 0'
-  },
-  h2: {
-    fontSize: '14px',
-    margin: 0
-  }
-}
 
 SideBarHeader = Radium(SideBarHeader);
 export default SideBarHeader;
