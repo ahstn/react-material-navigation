@@ -9,6 +9,10 @@ export default {
     width: '100%',
     zIndex: 9
   },
+  adjacent: {
+    width: 'calc(100% - 240px)',
+    marginLeft: '240px'
+  },
   item: {
     display: 'inline-flex',
     justifyContent: 'center',

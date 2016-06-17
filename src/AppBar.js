@@ -8,10 +8,11 @@ class AppBar extends Component {
   }
 
   render() {
-    const { title, icon, children, onMenuClick } = this.props;
+    const { title, icon, overlay, children, onMenuClick } = this.props;
 
     return (
-      <header className='appbar' style={[ styles.base ]}>
+      <header className='appbar'
+        style={[ styles.base, overlay ? null : styles.adjacent ]}>
         <div className='appbar-nav-button'
           style={[ styles.content, styles.button ]}
           onClick={ onMenuClick }>
@@ -29,8 +30,13 @@ class AppBar extends Component {
 AppBar.propTypes = {
   title: PropTypes.string.isRequired,
   icon: PropTypes.string,
+  overlay: PropTypes.bool,
   onMenuClick: PropTypes.func
 };
+
+AppBar.defaultProps = {
+  overlay: true
+}
 
 AppBar = Radium(AppBar);
 export default AppBar;

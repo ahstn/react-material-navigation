@@ -8,7 +8,7 @@ class SideBar extends Component {
   }
 
   render() {
-    const { open, theme, children } = this.props;
+    const { open, theme, overlay, children } = this.props;
     let childrenWithProps = Children.map(children, (child) => {
       return cloneElement(child, { theme: theme });
     });
@@ -16,7 +16,8 @@ class SideBar extends Component {
 
 
     return (
-      <aside className="sidebar" style={[ styles.base, styles[theme] ]}>
+      <aside className="sidebar"
+        style={[ styles.base, styles[theme], overlay ? styles.adjacent : null ]}>
         { childrenWithProps }
       </aside>
     );
@@ -25,11 +26,14 @@ class SideBar extends Component {
 
 SideBar.propTypes = {
   open: PropTypes.bool,
+  overlay: PropTypes.bool,
   theme: PropTypes.oneOf(['light', 'dark'])
 };
 
 SideBar.defaultProps = {
+  overlay: true,
   theme: 'light'
 };
+
 SideBar = Radium(SideBar);
 export default SideBar;

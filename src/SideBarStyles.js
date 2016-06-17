@@ -13,6 +13,9 @@ export default {
     width: '240px',
     zIndex: 5
   },
+  adjacent: {
+    top: 0
+  },
   header: {
     width: '100%',
     padding: '1rem'
