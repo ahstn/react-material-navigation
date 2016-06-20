@@ -1,27 +1,34 @@
 {
   "name": "react-material-navigation",
   "author": "Adam Houston",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Simple React implementation of Material Design's Navigation Drawer and Toolbar.",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --recursive",
     "test-cov": "babel-node isparta cover --report html --report text node_modules/.bin/_mocha",
-    "build": "babel src --out-dir dist",
+    "build": "babel lib --out-dir dist",
     "clean": "rm -rf dist",
-    "lint": "eslint src test"
+    "lint": "eslint src test",
+    "dev": "webpack-dev-server -d --history-api-fallback --progress --hot --inline --port 3000"
   },
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.1.21",
     "babel-eslint": "^4.1.5",
+    "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.1.18",
     "eslint": "^1.9.0",
     "eslint-plugin-react": "^3.10.0",
+    "file-loader": "^0.9.0",
+    "path": "^0.12.7",
     "radium": "^0.17.1",
-    "react": "^15.1.0"
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-router": "^2.4.1",
+    "webpack": "^1.13.1"
   },
   "peerDependencies": {
     "radium": "0.17.1"

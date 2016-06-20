@@ -1,7 +1,9 @@
  .DS_Store
+webpack.config.js
 *.log
 node_modules
 src
+example
 test
 examples
 coverage
